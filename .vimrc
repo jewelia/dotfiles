@@ -59,9 +59,9 @@ Bundle "scrooloose/syntastic"
 "Bundle "oryband/syntastic"
 let g:syntastic_enable_signs=1  " Show sidebar signs.
 "let g:syntastic_auto_loc_list=1  " Auto open errors window upon detection.
-set statusline+=%#warningmsg#  " Add Error ruler.
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
+"set statusline+=%#warningmsg#  " Add Error ruler.
+"set statusline+=%{SyntasticStatuslineFlag()}
+"set statusline+=%*
 nnoremap <silent> ` :Errors<CR>
 
 " NOTE: For Javascript:
@@ -96,8 +96,8 @@ let g:showmarks_textother="\.\t"
 Bundle "majutsushi/tagbar"
 nnoremap <silent> \ :TagbarToggle<CR>
 
-Bundle 'minibufexpl.vim'
-let g:miniBufExplModSelTarget = 1  " Don't open buffer in a non-modifiable buffer (e.g. TagList window).
+"Bundle 'minibufexpl.vim'
+"let g:miniBufExplModSelTarget = 1  " Don't open buffer in a non-modifiable buffer (e.g. TagList window).
 "let g:miniBufExplVSplit = 13  " Vertical column static width in chars
 "let g:miniBufExplMaxSize = 2   " Vertical column max size.
 "let g:miniBufExplForceSyntaxEnable = 1  " Use this if you encounter highlighting bugs (colors not changing).
@@ -190,10 +190,10 @@ set ignorecase  " Ignore case when searching.
 
 
 " Folding
-set foldenable  " Turn on folding.
-set foldmethod=marker  " Fold on the marker.
-set foldlevel=100  " Don't autofold anything (but I can still fold manually).
-set foldopen=block,hor,tag,percent,mark,quickfix  " Which movements open folds.
+"set foldenable  " Turn on folding.
+"set foldmethod=marker  " Fold on the marker.
+"set foldlevel=100  " Don't autofold anything (but I can still fold manually).
+"set foldopen=block,hor,tag,percent,mark,quickfix  " Which movements open folds.
 
 
 " Backup
@@ -216,14 +216,14 @@ set nowritebackup
 
 " Window splitting
 "set equalalways  " Multiple windows, when created, are equal in size. NOTE: Doesn't work well with MiniBufExpl.vim
-set splitbelow splitright  " New windows are created to the bottom-right.
+"set splitbelow splitright  " New windows are created to the bottom-right.
 
 
 " Status Line
 set shortmess=at  " Shortens messages in status line, truncates long messages.
 set laststatus=2  " Always show status line.
 set showcmd  " Display an incomplete command in status line.
-set ruler  " Show file status ruler. NOTE: Doesn't work with buftabs.vim plugin.
+"set ruler  " Show file status ruler. NOTE: Doesn't work with buftabs.vim plugin.
 "set ch=2  " Make command line two lines high
 
 
@@ -290,3 +290,5 @@ set tags=./tags;/
 "set debug=msg  " Show Vim error messages.
 
 set timeoutlen=500  " Set key-combination timeout.
+
+set noswapfile " No .swp file creation
